@@ -15,12 +15,13 @@ if ($_SESSION["id"]!=""){
 
 ?>
 <body>
-
+<b><center><br><br>
+<p> Hanes Global Supply Chain Philippines Inc<br><br><br>Multifunction Kiosk<br><BR>Scan ID :</p></b>
 <form action="login.php" method="post" id="myform">
-<input type="text" name="userid" id="userid" placeholder="userid">
+<input type="password" name="userid" id="userid" placeholder="userid">
 
 <button id="submit" >SUBMIT</button>
-
+</center>
 
 
 <script>
@@ -36,6 +37,7 @@ $('#submit').click(function(){
  $('#myform :input').serializeArray(),
  function(result){
  $('#result1').html(result);
+ $('#myform')[0].reset();
  }
  );
 
